@@ -2,7 +2,7 @@
 (() => {
   /* Paste a form backend URL here (Formspree, Google Apps Script, or your own API) to collect submissions directly.
      Leave empty and forms open the visitor's email app addressed to contact@tamiko.club instead. */
-  const FORM_ENDPOINT = "";
+  const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyLPsJO0sUc8jdEufJE4xHAlhZ_oDaevWaoFkP0nbV-2exMcslKdcjdQH5N-Bf1vt6_IQ/exec";
   const CONTACT = "contact@tamiko.club";
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 

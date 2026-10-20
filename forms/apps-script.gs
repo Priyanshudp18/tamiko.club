@@ -39,7 +39,7 @@ function doPost(e) {
       sh.setFrozenRows(1);
     }
     const clean = (v) => String(v == null ? "" : v).slice(0, 2000).replace(/^[=+\-@]/, "'$&");
-    const row = FIELDS[kind].map((k) => (k === "at" ? new Date() : clean(data[k])));
+    const row = FIELDS[kind].map((k) => (k === "at" ? Utilities.formatDate(new Date(), "Asia/Kolkata", "dd MMM yyyy, hh:mm a") : clean(data[k])));
     sh.appendRow(row);
 
     const lines = TABS[kind].map((h, i) => `${h}: ${row[i]}`).join("\n");
