@@ -83,8 +83,11 @@
       if (FORM_ENDPOINT) {
         const label = btn.textContent; btn.disabled = true; btn.textContent = "Sending…";
         try {
-          const r = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+          // text/plain keeps this a "simple" request, which Google Apps Script accepts without a CORS preflight
+          const r = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) });
           if (!r.ok) throw 0;
+          const res = await r.json().catch(() => ({ ok: true }));
+          if (res.ok === false) throw 0;
           form.reset(); show(form.dataset.success || "Thanks. We've got your details and will be in touch soon."); btn.textContent = "Sent";
         } catch (_) { show("That didn't go through. Please try again or email " + CONTACT + ".", true); btn.disabled = false; btn.textContent = label; }
         return;
