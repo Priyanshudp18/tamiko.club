@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Join the Tamiko Club</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Join Tamiko's Tamiko Club free and be first in line when try-at-home beauty opens in your area.">
+<meta property="og:title" content="Join the Tamiko Club">
+<meta property="og:description" content="Join Tamiko's Tamiko Club free and be first in line when try-at-home beauty opens in your area.">
+<meta property="og:image" content="https://tamiko.club/images/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF8FA">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.join-sec { position: relative; overflow: hidden; }
+.float-3d { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 1.4s var(--ease); }
+.float-3d.ready { opacity: 1; }
+.join-grid { position: relative; z-index: 1; display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(32px, 5vw, 72px); align-items: start; padding-block: clamp(48px, 7vw, 96px); }
+.join-side { display: grid; gap: 22px; }
+.join-side h1 { font-size: var(--s-4); }
+.mail-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.mail-line code { font-family: var(--f-body); font-weight: 600; user-select: all; }
+.copy { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font: 500 .85rem var(--f-body); cursor: pointer; }
+@media (max-width: 960px) { .join-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="wordmark" href="index.html" aria-label="Tamiko home"><img src="logo.svg" alt="Tamiko" width="132" height="34"></a>
+    <nav class="nav" id="nav" aria-label="Primary"><a href="how-it-works.html">How it works</a><a href="experts.html">Our experts</a><a href="brands.html">For brands</a><a href="faq.html">FAQ</a></nav>
+    <a class="btn btn-primary btn-sm" href="join.html">Join the Tamiko Club</a>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<main>
+
+<section class="join-sec">
+  <canvas class="float-3d" data-float="join" aria-hidden="true"></canvas>
+  <div class="wrap join-grid">
+    <div class="join-side">
+      <p class="eyebrow">The Tamiko Club</p>
+      <h1 class="h-display">Done buying blind? <em>You're one of us.</em></h1>
+      <p class="lede">Join free and be first in line when Tamiko opens in your area. Founding members get first slots, early drops, and a say in which brands we bring in.</p>
+      <figure class="art hills" style="--ar:1448 / 1086"><img src="images/join-hero.jpg" alt="A cosy room at sunset with a beauty kit waiting on a side table" loading="eager" fetchpriority="high" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/join-hero.jpg</figcaption></figure>
+      <div class="stores"><span class="store" aria-label="Tamiko on the App Store, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg><span class="store-txt"><small>Tamiko on the</small><b>App Store</b></span><em class="soon">Coming soon</em></span><span class="store" aria-label="Tamiko on Google Play, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" stroke-linejoin="round"/></svg><span class="store-txt"><small>Tamiko on</small><b>Google Play</b></span><em class="soon">Coming soon</em></span></div>
+      <div class="mail-line"><span style="color:var(--muted)">Questions?</span><code>contact@tamiko.club</code><button type="button" class="copy" data-copy="contact@tamiko.club">Copy</button></div>
+    </div>
+    <form class="form" data-form="waitlist" novalidate data-success="You're in. Welcome to the Tamiko Club. We'll reach out when slots open in your area.">
+      <div class="row2">
+        <div class="field"><label for="w-name">Your name</label><input id="w-name" name="name" autocomplete="name" required data-label="your name"></div>
+        <div class="field"><label for="w-phone">Mobile</label><input id="w-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required data-label="your mobile number"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="w-email">Email (optional)</label><input id="w-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="w-area">Area</label>
+          <select id="w-area" name="area" required data-label="your area">
+            <option value="" selected disabled>Select your area</option>
+            <option>Gurugram · Golf Course Road</option><option>Gurugram · Golf Course Extension</option><option>Gurugram · Sohna Road</option>
+            <option>Gurugram · DLF Phases 1–5</option><option>Gurugram · Dwarka Expressway</option><option>Gurugram · Other</option>
+            <option>South Delhi</option><option>West Delhi</option><option>Noida</option><option>Elsewhere in NCR</option>
+          </select></div>
+      </div>
+      <fieldset class="field"><legend>I want to try</legend><div class="chips">
+        <label class="chip"><input type="checkbox" name="interests" value="Makeup" id="wi1"><span>Makeup</span></label>
+        <label class="chip"><input type="checkbox" name="interests" value="Skincare" id="wi2"><span>Skincare</span></label>
+        <label class="chip"><input type="checkbox" name="interests" value="Fragrance" id="wi3"><span>Fragrance</span></label>
+        <label class="chip"><input type="checkbox" name="interests" value="Haircare" id="wi4"><span>Haircare</span></label>
+        <label class="chip"><input type="checkbox" name="interests" value="Bath & body" id="wi5"><span>Bath &amp; body</span></label>
+        <label class="chip"><input type="checkbox" name="interests" value="Grooming" id="wi6"><span>Grooming</span></label>
+      </div></fieldset>
+      <div class="field"><label for="w-brands">Brands you'd love to try (optional)</label><input id="w-brands" name="brands" placeholder="Tell us and we'll try to bring them in"></div>
+      <p class="form-msg" hidden></p>
+      <button class="btn btn-primary" type="submit">Join the Tamiko Club</button>
+      <p class="fine">By joining, you agree that Tamiko may contact you about your membership and launch in your area. See our <a href="privacy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="wordmark" href="index.html" aria-label="Tamiko home"><img src="logo-white.svg" alt="Tamiko" width="150" height="39"></a>
+        <p class="foot-tag">Beauty and personal care, tried at home before you buy. Opening first in Gurugram.</p>
+        <div class="stores stores-foot"><span class="store" aria-label="Tamiko on the App Store, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg><span class="store-txt"><small>Tamiko on the</small><b>App Store</b></span><em class="soon">Coming soon</em></span><span class="store" aria-label="Tamiko on Google Play, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" stroke-linejoin="round"/></svg><span class="store-txt"><small>Tamiko on</small><b>Google Play</b></span><em class="soon">Coming soon</em></span></div>
+      </div>
+      <div><h4>Tamiko</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="experts.html">Our experts</a></li><li><a href="faq.html">FAQ</a></li><li><a href="join.html">Join the Tamiko Club</a></li></ul></div>
+      <div><h4>Work with us</h4><ul><li><a href="brands.html">For brands</a></li><li><a href="experts.html#apply">Become an expert</a></li><li><a href="mailto:contact@tamiko.club">contact@tamiko.club</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Tamiko Technologies Private Limited. All rights reserved.</span><span>Try first. Buy once. Love it for real.</span></div>
+  </div>
+</footer>
+<script src="site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="three3d.js"></script>
+</body>
+</html>
