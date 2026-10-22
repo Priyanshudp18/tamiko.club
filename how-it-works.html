@@ -30,6 +30,23 @@
 <link rel="stylesheet" href="site.css">
 <style>
 .hiw-hero .art { margin-top: clamp(32px, 5vw, 56px); }
+.fsteps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.fstep { background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.fstep .art, .fstep .art.tall { border-radius: 0; width: 100%; aspect-ratio: 4 / 3 !important; margin: 0; }
+.fstep .art img { object-fit: cover; object-position: 50% 35%; }
+.fstep > div { padding: 16px 18px 20px; }
+.fstep .n { font-family: var(--f-display); font-size: 1rem; color: var(--rose); }
+.fstep h3 { font-family: var(--f-display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 4px 0 6px; }
+.fstep p { margin: 0; color: var(--muted); font-size: .95rem; }
+@media (max-width: 960px) { .fsteps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) {
+  .fsteps { grid-template-columns: 1fr; gap: 10px; }
+  .fstep { grid-template-columns: 112px 1fr; grid-template-rows: auto; align-items: center; }
+  .fstep .art { aspect-ratio: 1 / 1 !important; height: 100%; }
+  .fstep .art img { object-fit: cover; }
+  .fstep > div { padding: 12px 14px; }
+  .fstep h3 { font-size: 1.15rem; }
+}
 .flow { display: grid; gap: clamp(48px, 7vw, 96px); }
 .flow-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
 .flow-row:nth-child(even) > .art { order: 2; }
@@ -37,7 +54,7 @@
 .flow-row h3 { font-family: var(--f-display); font-weight: 400; font-size: var(--s-3); line-height: 1.05; margin: 8px 0 14px; }
 .flow-row p { margin: 0 0 14px; color: var(--muted); max-width: 52ch; }
 .timeline { display: grid; gap: 0; }
-.tl { display: grid; grid-template-columns: 96px 1fr; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.tl { display: grid; grid-template-columns: 70px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .tl:first-child { border-top: 1px solid var(--line); }
 .tl time { font-family: var(--f-display); font-size: 1.5rem; color: var(--rose); font-variant-numeric: tabular-nums; }
 .tl b { display: block; margin-bottom: 4px; }
@@ -82,41 +99,32 @@ table.cmp { width: 100%; border-collapse: collapse; min-width: 640px; }
   <div class="wrap">
     <p class="eyebrow">How it works</p>
     <h1 class="h-display">Try it where you'll <em>actually wear it.</em></h1>
-    <p class="lede">Your bathroom mirror. Your window light. Your skin on a normal day. That's where beauty decisions should be made, and that's where Tamiko brings them.</p>
-    <figure class="art hills" style="--ar:1600 / 686"><img src="images/hiw-hero.jpg" alt="A bright home vanity by a window with beauty products laid out for trying" loading="eager" fetchpriority="high" width="1600" height="686" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/hiw-hero.jpg</figcaption></figure>
+    <p class="lede">Your mirror, your light, your skin. That's where beauty decisions should be made.</p>
   </div>
 </section>
 
-<section class="pad" style="padding-top:clamp(24px,4vw,48px)">
-  <div class="wrap flow">
-    <div class="flow-row rv">
-      <figure class="art " style="--ar:1448 / 1086"><img src="images/step-browse.jpg" alt="Someone browsing beauty products on their phone on a cosy sofa" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/step-browse.jpg</figcaption></figure>
-      <div><span class="n">01</span><h3>Pick what you want to try</h3>
-        <p>Browse makeup, skincare, fragrance, haircare, bath and body, and grooming. Filter by concern, skin type, shade or scent.</p>
-        <p>Every product shows how you can get it: <b>Try with Expert</b>, <b>Try with Sample</b> or <b>Buy Direct</b>. Not sure? Ask for suggestions and we'll build your list.</p></div>
+<section class="pad-sm" style="padding-top:0">
+  <div class="wrap fsteps">
+    <div class="fstep rv">
+      <figure class="art " style="--ar:1448 / 1086"><img src="images/step-browse.jpg" alt="Someone browsing beauty products on their phone" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/step-browse.jpg</figcaption></figure>
+      <div><span class="n">01</span><h3>Pick your products</h3><p>Makeup, skincare, fragrance and more. Each shows how you can get it.</p></div>
     </div>
-    <div class="flow-row rv">
-      <figure class="art " style="--ar:1448 / 1086"><img src="images/step-slot.jpg" alt="A calendar on a sunny desk with a time slot circled" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/step-slot.jpg</figcaption></figure>
-      <div><span class="n">02</span><h3>Choose your way</h3>
-        <p><b>Try with Expert:</b> see the next available slot for your area and book the time that suits you. You'll get your expert's name and a reminder before they arrive.</p>
-        <p><b>Try with Sample</b> or <b>Buy Direct:</b> place your order and it reaches you in 60 minutes in Gurugram.</p></div>
+    <div class="fstep rv">
+      <figure class="art " style="--ar:1448 / 1086"><img src="images/step-slot.jpg" alt="A calendar with a time slot circled" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/step-slot.jpg</figcaption></figure>
+      <div><span class="n">02</span><h3>Choose your way</h3><p>Book an expert slot, or order a sample or full size for 60 minutes.</p></div>
     </div>
-    <div class="flow-row rv">
+    <div class="fstep rv">
       <figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/visit-living-room.jpg" alt="A Tamiko expert and a customer comparing swatches at home" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/visit-living-room.jpg</figcaption></figure>
-      <div><span class="n">03</span><h3>Try everything, properly</h3>
-        <p>Your expert takes each product out of its cleaned tester with a clean spatula and helps with shade, texture, finish and how a scent settles. Or they step back and let you explore.</p>
-        <p>Samples are yours to try your way, at your own pace. When one clicks, order the full size in a tap.</p></div>
+      <div><span class="n">03</span><h3>Try it properly</h3><p>Your expert helps with shade and texture, or you try samples your way.</p></div>
     </div>
-    <div class="flow-row rv">
-      <figure class="art " style="--ar:1448 / 1086"><img src="images/step-keep.jpg" alt="A small beauty pouch with two chosen products, the rest packed into a navy kit" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/step-keep.jpg</figcaption></figure>
-      <div><span class="n">04</span><h3>Keep what you love</h3>
-        <p>With an expert, buy the sealed full-size products you want at the end of the visit. Everything else goes back in the kit.</p>
-        <p>Keep one, keep all, or keep nothing. No pressure, ever.</p></div>
+    <div class="fstep rv">
+      <figure class="art " style="--ar:1448 / 1086"><img src="images/step-keep.jpg" alt="A small pouch with two chosen products" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/step-keep.jpg</figcaption></figure>
+      <div><span class="n">04</span><h3>Keep what you love</h3><p>With an expert, buy only what you love. The rest goes back.</p></div>
     </div>
   </div>
 </section>
 
-<section class="band pad">
+<section class="band pad-sm">
   <div class="wrap grid-2" style="align-items:start">
     <div class="sec-head rv" style="margin-bottom:0">
       <p class="eyebrow">Try with Expert, minute by minute</p>
@@ -133,9 +141,9 @@ table.cmp { width: 100%; border-collapse: collapse; min-width: 640px; }
   </div>
 </section>
 
-<section class="pad">
+<section class="pad-sm">
   <div class="wrap">
-    <div class="sec-head rv"><p class="eyebrow">Three ways to Tamiko</p><h2 class="h-display">Which one is for you?</h2></div>
+    <div class="sec-head rv" style="margin-bottom:28px"><p class="eyebrow">Three ways to Tamiko</p><h2 class="h-display">Which one is for you?</h2></div>
     <div class="modes">
       <div class="card rv"><p class="eyebrow">Try with Expert</p><h3>Home trial, at a slot you book</h3>
         <ul class="ticks"><li><span>Sealed full size plus a tester of each product</span></li><li><span>A trained Tamiko BPC expert at your home</span></li><li><span>Buy only what you love, the rest goes back</span></li><li><span>Best for foundation, fragrance and serious skincare</span></li></ul></div>
@@ -147,9 +155,9 @@ table.cmp { width: 100%; border-collapse: collapse; min-width: 640px; }
   </div>
 </section>
 
-<section class="band pad">
+<section class="band pad-sm">
   <div class="wrap">
-    <div class="sec-head rv"><p class="eyebrow">Why Tamiko</p><h2 class="h-display">The best of the store, <em>without the store.</em></h2></div>
+    <div class="sec-head rv" style="margin-bottom:28px"><p class="eyebrow">Why Tamiko</p><h2 class="h-display">The best of the store, <em>without the store.</em></h2></div>
     <div class="table-wrap rv">
       <table class="cmp">
         <thead><tr><th scope="col"><span style="position:absolute;left:-9999px">Feature</span></th><th scope="col">Shopping apps</th><th scope="col">Store counters</th><th scope="col" class="us">Tamiko</th></tr></thead>
