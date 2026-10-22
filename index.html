@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tamiko · Try & Buy Beauty at Home in Gurugram</title>
+<title>Tamiko · Try & Buy Beauty at Home in Delhi NCR</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Tamiko is try and buy beauty at home. Try makeup, skincare, fragrance, haircare and grooming with a Tamiko expert, then pay only for what you keep. Opening first in Gurugram and Delhi NCR.">
+<meta name="description" content="Tamiko is try and buy beauty, three ways: try with an expert at home, get a sample in 60 minutes, or buy the full size in 60 minutes. Makeup, skincare, fragrance, haircare and grooming, launching in Delhi NCR.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://tamiko.club/">
 <meta property="og:site_name" content="Tamiko">
 <meta property="og:locale" content="en_IN">
 <meta property="og:url" content="https://tamiko.club/">
-<meta property="og:title" content="Tamiko · Try & Buy Beauty at Home in Gurugram">
-<meta property="og:description" content="Tamiko is try and buy beauty at home. Try makeup, skincare, fragrance, haircare and grooming with a Tamiko expert, then pay only for what you keep. Opening first in Gurugram and Delhi NCR.">
+<meta property="og:title" content="Tamiko · Try & Buy Beauty at Home in Delhi NCR">
+<meta property="og:description" content="Tamiko is try and buy beauty, three ways: try with an expert at home, get a sample in 60 minutes, or buy the full size in 60 minutes. Makeup, skincare, fragrance, haircare and grooming, launching in Delhi NCR.">
 <meta property="og:image" content="https://tamiko.club/images/og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tamiko · Try & Buy Beauty at Home in Gurugram">
-<meta name="twitter:description" content="Tamiko is try and buy beauty at home. Try makeup, skincare, fragrance, haircare and grooming with a Tamiko expert, then pay only for what you keep. Opening first in Gurugram and Delhi NCR.">
+<meta name="twitter:title" content="Tamiko · Try & Buy Beauty at Home in Delhi NCR">
+<meta name="twitter:description" content="Tamiko is try and buy beauty, three ways: try with an expert at home, get a sample in 60 minutes, or buy the full size in 60 minutes. Makeup, skincare, fragrance, haircare and grooming, launching in Delhi NCR.">
 <meta name="twitter:image" content="https://tamiko.club/images/og-image.jpg">
 <link rel="apple-touch-icon" href="logo-mark.svg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://tamiko.club/#org", "name": "Tamiko", "legalName": "Tamiko Technologies Private Limited", "alternateName": ["Tamiko Club", "Tamiko Try and Buy", "Tamico", "Temiko", "Temico"], "url": "https://tamiko.club/", "logo": "https://tamiko.club/logo.svg", "description": "Try and buy beauty and personal care at home. A Tamiko expert brings sealed products and fresh testers; you pay only for what you keep.", "areaServed": [{"@type": "City", "name": "Gurugram"}, {"@type": "AdministrativeArea", "name": "Delhi NCR"}], "slogan": "Never buy beauty blind again."}, {"@type": "WebSite", "@id": "https://tamiko.club/#site", "url": "https://tamiko.club/", "name": "Tamiko", "alternateName": ["Tamiko Club", "Tamico", "Temiko", "Temico"], "inLanguage": "en-IN", "publisher": {"@id": "https://tamiko.club/#org"}}, {"@type": "Service", "name": "Try and buy beauty at home", "serviceType": "Try before you buy beauty and personal care", "provider": {"@id": "https://tamiko.club/#org"}, "areaServed": "Gurugram, Delhi NCR", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR", "description": "Free expert visit; pay only for products you keep"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://tamiko.club/#org", "name": "Tamiko", "legalName": "Tamiko Technologies Private Limited", "alternateName": ["Tamiko Club", "Tamiko Try and Buy", "Tamico", "Temiko", "Temico"], "url": "https://tamiko.club/", "logo": "https://tamiko.club/logo.svg", "description": "Try and buy beauty and personal care three ways: home trials with a Tamiko expert, samples in 60 minutes, and full-size products in 60 minutes in Gurugram.", "areaServed": [{"@type": "City", "name": "Gurugram"}, {"@type": "AdministrativeArea", "name": "Delhi NCR"}], "address": {"@type": "PostalAddress", "streetAddress": "3rd Floor, Landmark Cyber Park, Sector 67", "addressLocality": "Gurugram", "addressRegion": "Haryana", "postalCode": "122002", "addressCountry": "IN"}, "slogan": "Never buy beauty blind again."}, {"@type": "WebSite", "@id": "https://tamiko.club/#site", "url": "https://tamiko.club/", "name": "Tamiko", "alternateName": ["Tamiko Club", "Tamico", "Temiko", "Temico"], "inLanguage": "en-IN", "publisher": {"@id": "https://tamiko.club/#org"}}, {"@type": "Service", "name": "Try and buy beauty at home", "serviceType": "Try before you buy beauty and personal care: home trials, 60-minute samples and 60-minute delivery", "provider": {"@id": "https://tamiko.club/#org"}, "areaServed": "Gurugram, Delhi NCR"}]}</script>
 <meta name="theme-color" content="#FBF8FA">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -38,6 +38,8 @@
 @keyframes drift { from { transform: translateX(-40vw); } to { transform: translateX(120vw); } }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: clamp(48px, 7vw, 96px) clamp(56px, 8vw, 110px); }
 .hero-copy { display: grid; gap: 26px; min-width: 0; }
+.hero-copy .pill { width: auto; max-width: 100%; justify-self: start; line-height: 1.35; }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } }
 .hero h1 { font-size: var(--s-4); }
 .hero h1 .w { display: inline-block; animation: up 1s var(--ease) both; }
 .hero h1 .w:nth-child(2) { animation-delay: .06s } .hero h1 .w:nth-child(3) { animation-delay: .12s } .hero h1 .w:nth-child(4) { animation-delay: .18s } .hero h1 .w:nth-child(5) { animation-delay: .24s }
@@ -83,17 +85,30 @@
 .chant-foot p { margin: 0; max-width: 52ch; color: var(--muted); font-size: var(--s-1); }
 
 /* two ways */
-.ways { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .way { background: #fff; border: 1px solid var(--line); border-radius: 28px; overflow: hidden; display: grid; min-width: 0; transition: transform .5s var(--ease), box-shadow .5s; }
 .way:hover { transform: translateY(-6px); box-shadow: 0 40px 70px -45px rgba(17,23,53,.45); }
 .way .art { border-radius: 0; }
-.way .body { padding: clamp(24px, 3vw, 36px); display: grid; gap: 14px; }
+.way { grid-template-rows: auto 1fr; }
+.way .body { padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px; }
+.way .body .foot { margin-top: auto; }
 .way .tag { font-size: var(--s--1); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); margin: 0; }
-.way h3 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: var(--s-3); line-height: 1; }
+.way h3 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: var(--s-2); line-height: 1.1; }
 .way p { margin: 0; color: var(--muted); }
 .way .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 6px; }
 .way .foot b { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; }
 .way .foot span { color: var(--muted); font-size: .9rem; }
+
+/* 60 minutes */
+.sixty-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.sixty-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.sixty-steps li { display: grid; grid-template-columns: 96px 1fr; column-gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+.sixty-steps li:first-child { border-top: 1px solid rgba(255,255,255,.14); }
+.sixty-steps .t { grid-row: span 2; font-family: var(--f-display); font-size: 1.7rem; line-height: 1.1; color: var(--rose-soft); font-variant-numeric: tabular-nums; }
+.sixty-steps b { font-weight: 600; font-size: 1.1rem; }
+.sixty-steps p { margin: 4px 0 0; color: var(--on-navy-muted); }
+@media (max-width: 960px) { .sixty-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .sixty-steps li { grid-template-columns: 76px 1fr; } .sixty-steps .t { font-size: 1.35rem; } }
 
 /* categories */
 .cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -114,9 +129,11 @@
 
 /* perks */
 .perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.perk { border-top: 1px solid rgba(255,255,255,.18); padding-top: 22px; display: grid; gap: 8px; }
-.perk b { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; line-height: 1.1; }
-.perk p { margin: 0; color: var(--on-navy-muted); }
+.founding-head { display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: flex-end; justify-content: space-between; margin-bottom: clamp(32px, 4vw, 52px); }
+.perk { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.perk-n { font-family: var(--f-display); font-size: 1.1rem; color: var(--rose); }
+.perk b { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; line-height: 1.15; }
+.perk p { margin: 0; color: var(--muted); }
 
 
 /* 3D */
@@ -146,13 +163,17 @@
   .hero-grid, .regret-grid { grid-template-columns: 1fr; }
   .regret-art { position: static; }
   .float-card.a { left: 10px; } .float-card.b { right: 10px; }
-  .ways { grid-template-columns: 1fr; }
+  .ways { grid-template-columns: 1fr; max-width: 640px; }
   .cats { grid-template-columns: 1fr 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
   .perks { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
-  .cats, .steps { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .cats { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cat .lbl { left: 8px; right: 8px; bottom: 8px; padding: 9px 10px; border-radius: 12px; }
+  .cat .lbl b { font-size: 1.05rem; }
+  .cat .lbl span { display: none; }
   .float-card.b { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .marquee-track, .cloud { animation: none; } .chant p { color: var(--ink); } }
@@ -161,7 +182,7 @@
 <body>
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="wordmark" href="index.html" aria-label="Tamiko home"><img src="logo.svg" alt="Tamiko" width="132" height="34"></a>
+    <a class="wordmark" href="index.html" aria-label="Tamiko home"><img src="logo.svg" alt="Tamiko" width="119" height="29"></a>
     <nav class="nav" id="nav" aria-label="Primary"><a href="how-it-works.html">How it works</a><a href="experts.html">Our experts</a><a href="brands.html">For brands</a><a href="faq.html">FAQ</a></nav>
     <a class="btn btn-primary btn-sm" href="join.html">Join the Tamiko Club</a>
     <button class="menu-btn" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
@@ -174,18 +195,18 @@
   <canvas class="float-3d" data-float="home" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="pill"><i></i>Try &amp; buy beauty at home · opening first in Gurugram</span>
+      <span class="pill"><i></i>Launching in Delhi NCR</span>
       <h1 class="h-display"><span class="w">Never</span> <span class="w">buy</span> <span class="w">beauty</span> <span class="w"><em>blind</em></span> <span class="w">again.</span></h1>
-      <p class="lede">Tamiko is try and buy for beauty. We bring makeup, skincare, fragrance, haircare and more to your home so you can try before you buy. A trained Tamiko expert arrives with sealed products and fresh testers, or a discovery kit lands at your door. You keep what you love and pay only for that.</p>
+      <p class="lede">Tamiko is try and buy for beauty, three ways. Book a Tamiko expert to try at home, get a sample at your door in 60 minutes, or buy the full size in 60 minutes. Makeup, skincare, fragrance, haircare and more, launching in Delhi NCR.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="join.html">Join the Tamiko Club <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
         <a class="btn btn-line" href="how-it-works.html">See how it works</a>
       </div>
-      <ul class="trust"><li><b>₹0</b> to book a visit</li><li><b>Sealed</b> full-size products</li><li><b>Single-use</b> applicators</li><li><b>No</b> pressure to buy</li></ul>
+      <ul class="trust"><li><b>60 min</b> in Gurugram</li><li><b>Sealed</b> full-size products</li><li><b>Genuine</b> brands, invoiced</li><li><b>No</b> pressure to buy</li></ul>
       <div class="hero-apps"><p class="apps-label">The Tamiko app</p><div class="stores"><span class="store" aria-label="Tamiko on the App Store, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg><span class="store-txt"><small>Tamiko on the</small><b>App Store</b></span><em class="soon">Coming soon</em></span><span class="store" aria-label="Tamiko on Google Play, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" stroke-linejoin="round"/></svg><span class="store-txt"><small>Tamiko on</small><b>Google Play</b></span><em class="soon">Coming soon</em></span></div></div>
     </div>
     <div class="hero-art">
-      <figure class="art hills" style="--ar:1024 / 1536"><img src="images/hero-home.jpg" alt="A Tamiko expert helping someone try beauty products in a sunlit living room" loading="eager" fetchpriority="high" width="1024" height="1536" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/hero-home.jpg</figcaption></figure>
+      <figure class="art hills tall" style="--ar:1024 / 1536;--r:0.6667"><img src="images/hero-home.jpg" alt="A Tamiko expert helping someone try beauty products in a sunlit living room" loading="eager" fetchpriority="high" width="1024" height="1536" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/hero-home.jpg</figcaption></figure>
       <div class="float-card a"><small>Example visit</small><b>Saturday, 11:00</b><span>8 products to try · 1 expert</span></div>
       <div class="float-card b"><small>Kept</small><b>2 of 8</b><span>Paid only for those</span></div>
     </div>
@@ -213,7 +234,7 @@
       </div>
       <p class="punch rv">That's blind buying. <em>We're ending it.</em></p>
     </div>
-    <div class="regret-art rv"><figure class="art " style="--ar:1122 / 1402"><img src="images/regret-room.jpg" alt="Someone sitting among opened delivery boxes of beauty products on a rainy afternoon" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/regret-room.jpg</figcaption></figure></div>
+    <div class="regret-art rv"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/regret-room.jpg" alt="Someone sitting among opened delivery boxes of beauty products on a rainy afternoon" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/regret-room.jpg</figcaption></figure></div>
   </div>
 </section>
 
@@ -234,50 +255,57 @@
   </div>
 </section>
 
-<section class="band pad">
+<section class="band pad" id="three-ways">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="eyebrow">Two ways to try</p>
-      <h2 class="h-display">The right trial for <em>every</em> product.</h2>
-      <p class="lede">Some products deserve an expert and a mirror. Others just need a sample and a few days. Every product on Tamiko tells you which one it is.</p>
+      <p class="eyebrow">Three ways to Tamiko</p>
+      <h2 class="h-display">Try it, sample it, <em>or just get it.</em></h2>
+      <p class="lede">Some products deserve an expert and a mirror. Some just need a quick sample. And sometimes you already know what you want. Pick the way that fits.</p>
     </div>
     <div class="ways">
       <article class="way rv">
         <figure class="art " style="--ar:1586 / 992"><img src="images/expert-visit.jpg" alt="A Tamiko expert arriving at a doorstep with a navy beauty kit" loading="lazy" width="1586" height="992" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/expert-visit.jpg</figcaption></figure>
         <div class="body">
-          <p class="tag">For premium picks</p>
-          <h3>The Expert Visit</h3>
-          <p>A trained Tamiko expert brings the sealed products you chose and a tester of each. Try them on your skin, in your own light, with honest advice on shade, texture and fit.</p>
-          <div class="foot"><b>₹0 visit</b><span>Pay only for what you keep</span></div>
+          <p class="tag">Home trial</p>
+          <h3>Try with Expert</h3>
+          <p>Book an available slot and a trained Tamiko expert comes home with sealed products and a tester of each. Try on your skin, in your own light, with honest advice.</p>
+          <div class="foot"><b>Book a slot</b><span>At your home</span></div>
         </div>
       </article>
       <article class="way rv">
-        <figure class="art " style="--ar:1586 / 992"><img src="images/discovery-kit.jpg" alt="An open pastel box of beauty samples on a sunlit table" loading="lazy" width="1586" height="992" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/discovery-kit.jpg</figcaption></figure>
+        <figure class="art " style="--ar:1586 / 992"><img src="images/discovery-kit.jpg" alt="An open box of beauty samples on a sunlit table" loading="lazy" width="1586" height="992" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/discovery-kit.jpg</figcaption></figure>
         <div class="body">
-          <p class="tag">For new brands &amp; everyday finds</p>
-          <h3>The Discovery Kit</h3>
-          <p>A curated kit of samples from brands worth knowing. Try them over a few days, rate what you liked, and order the full size when something clicks.</p>
-          <div class="foot"><b>Kit fee comes back</b><span>As credit on your order</span></div>
+          <p class="tag">Sample first</p>
+          <h3>Try with Sample</h3>
+          <p>Curious about a product? Get a sample at your door in 60 minutes. Try it your way, then order the full size when it clicks.</p>
+          <div class="foot"><b>60 min</b><span>In Gurugram</span></div>
+        </div>
+      </article>
+      <article class="way rv">
+        <figure class="art " style="--ar:1586 / 992"><img src="images/buy-direct.jpg" alt="A Tamiko rider handing over a sealed beauty order at a doorstep" loading="lazy" width="1586" height="992" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/buy-direct.jpg</figcaption></figure>
+        <div class="body">
+          <p class="tag">Already know it</p>
+          <h3>Buy Direct</h3>
+          <p>Know what you want? Order the full size and it reaches you sealed and authentic, in 60 minutes.</p>
+          <div class="foot"><b>60 min</b><span>Full size, sealed</span></div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-
-<section class="kit3d navy-band" data-kit3d aria-labelledby="kit-title">
-  <div class="kit-sticky">
-    <canvas aria-hidden="true"></canvas>
-    <div class="wrap kit-copy">
-      <p class="eyebrow">Inside a Tamiko kit</p>
-      <h2 class="h-display" id="kit-title">Everything you need to decide. <em>Nothing you don't.</em></h2>
-      <ol class="kit-steps">
-        <li data-at="0"><b>Packed for you, sealed</b><span>Your kit is put together around the products you picked and stays sealed until it reaches your door.</span></li>
-        <li data-at="0.22"><b>Opened in front of you</b><span>Your expert opens it at your place, so you see exactly what's inside.</span></li>
-        <li data-at="0.45"><b>Full size plus a tester</b><span>For every product you chose, a sealed full size and a tester of the same item.</span></li>
-        <li data-at="0.75"><b>Fresh applicators, every time</b><span>Single-use swabs, sponges and spatulas, thrown away right after.</span></li>
-      </ol>
+<section class="navy-band pad sixty">
+  <div class="wrap sixty-grid">
+    <div class="sec-head rv" style="margin-bottom:0">
+      <p class="eyebrow">Fast, in Gurugram</p>
+      <h2 class="h-display">Samples and full sizes, <em>in 60 minutes.</em></h2>
+      <p class="lede">Order a sample or a full-size product and it's packed, sealed and at your door within the hour.</p>
     </div>
+    <ol class="sixty-steps rv">
+      <li><span class="t">0 min</span><b>You order</b><p>A sample or a full size, from the app or site.</p></li>
+      <li><span class="t">10 min</span><b>Packed and sealed</b><p>Checked, sealed and handed to a Tamiko rider.</p></li>
+      <li><span class="t">60 min</span><b>At your door</b><p>Sealed, authentic, and ready to try or use.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -287,7 +315,7 @@
       <p class="eyebrow">Everything in your routine</p>
       <h2 class="h-display">The whole of beauty and personal care, <em>at your door.</em></h2>
     </div>
-    <div class="cats"><a class="cat rv" href="how-it-works.html"><figure class="art " style="--ar:1122 / 1402"><img src="images/cat-makeup.jpg" alt="Makeup products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-makeup.jpg</figcaption></figure><div class="lbl"><b>Makeup</b><span>Base, lips, eyes</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art " style="--ar:1122 / 1402"><img src="images/cat-skincare.jpg" alt="Skincare products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-skincare.jpg</figcaption></figure><div class="lbl"><b>Skincare</b><span>Serums, SPF, care</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art " style="--ar:1122 / 1402"><img src="images/cat-fragrance.jpg" alt="Fragrance products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-fragrance.jpg</figcaption></figure><div class="lbl"><b>Fragrance</b><span>Perfumes, mists, attars</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art " style="--ar:1122 / 1402"><img src="images/cat-haircare.jpg" alt="Haircare products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-haircare.jpg</figcaption></figure><div class="lbl"><b>Haircare</b><span>Treatments, styling</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art " style="--ar:1122 / 1402"><img src="images/cat-bathbody.jpg" alt="Bath &amp; body products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-bathbody.jpg</figcaption></figure><div class="lbl"><b>Bath &amp; body</b><span>Washes, oils, lotions</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art " style="--ar:1122 / 1402"><img src="images/cat-grooming.jpg" alt="Grooming products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-grooming.jpg</figcaption></figure><div class="lbl"><b>Grooming</b><span>Shave, beard, care</span></div></a></div>
+    <div class="cats"><a class="cat rv" href="how-it-works.html"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/cat-makeup.jpg" alt="Makeup products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-makeup.jpg</figcaption></figure><div class="lbl"><b>Makeup</b><span>Base, lips, eyes</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/cat-skincare.jpg" alt="Skincare products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-skincare.jpg</figcaption></figure><div class="lbl"><b>Skincare</b><span>Serums, SPF, care</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/cat-fragrance.jpg" alt="Fragrance products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-fragrance.jpg</figcaption></figure><div class="lbl"><b>Fragrance</b><span>Perfumes, mists, attars</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/cat-haircare.jpg" alt="Haircare products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-haircare.jpg</figcaption></figure><div class="lbl"><b>Haircare</b><span>Treatments, styling</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/cat-bathbody.jpg" alt="Bath &amp; body products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-bathbody.jpg</figcaption></figure><div class="lbl"><b>Bath &amp; body</b><span>Washes, oils, lotions</span></div></a><a class="cat rv" href="how-it-works.html"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/cat-grooming.jpg" alt="Grooming products illustrated" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/cat-grooming.jpg</figcaption></figure><div class="lbl"><b>Grooming</b><span>Shave, beard, care</span></div></a></div>
   </div>
 </section>
 
@@ -298,10 +326,10 @@
       <h2 class="h-display">From cart to mirror in <em>four steps.</em></h2>
     </div>
     <div class="steps">
-      <div class="step rv"><h3>Pick what to try</h3><p>Browse by concern, shade, scent or brand. Each product shows how you can try it.</p></div>
-      <div class="step rv"><h3>Book a slot</h3><p>Choose the next available slot in your area. Nothing to pay upfront, no minimum order.</p></div>
-      <div class="step rv"><h3>Try at home</h3><p>Your expert or kit arrives on time. Testers are opened with fresh, sealed applicators.</p></div>
-      <div class="step rv"><h3>Keep what you love</h3><p>Pay for what you keep. Everything else goes back with us. No awkwardness.</p></div>
+      <div class="step rv"><h3>Pick your products</h3><p>Browse by concern, shade, scent or brand across makeup, skincare, fragrance and more.</p></div>
+      <div class="step rv"><h3>Choose your way</h3><p>Try with an expert at a slot you book, get a sample in 60 minutes, or buy the full size directly.</p></div>
+      <div class="step rv"><h3>It reaches you</h3><p>Your expert arrives on time, or your sample or order lands at your door within the hour.</p></div>
+      <div class="step rv"><h3>Keep what you love</h3><p>With an expert, you buy only what you love and the rest goes back. No pressure, ever.</p></div>
     </div>
     <p class="rv" style="margin-top:32px"><a class="btn btn-line" href="how-it-works.html">The full walkthrough <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a></p>
   </div>
@@ -309,57 +337,48 @@
 
 <section class="pad">
   <div class="wrap grid-2">
-    <div class="rv"><figure class="art " style="--ar:1402 / 1122"><img src="images/hygiene.jpg" alt="Sealed single-use applicators being opened beside a tester" loading="lazy" width="1402" height="1122" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/hygiene.jpg</figcaption></figure></div>
+    <div class="rv"><figure class="art " style="--ar:1402 / 1122"><img src="images/hygiene.jpg" alt="A Tamiko expert preparing a cleaned tester on a clean tray" loading="lazy" width="1402" height="1122" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/hygiene.jpg</figcaption></figure></div>
     <div class="rv" style="display:grid;gap:22px">
-      <p class="eyebrow">Hygiene, non-negotiable</p>
-      <h2 class="h-display" style="font-size:var(--s-3)">Nothing touches you <em>twice.</em></h2>
-      <p class="lede">A store tester has been on countless hands and lips. Ours never are.</p>
+      <p class="eyebrow">Hygiene, built in</p>
+      <h2 class="h-display" style="font-size:var(--s-3)">Clean testers. <em>Every visit.</em></h2>
+      <p class="lede">Each product has one tester, so we look after it properly. It is cleaned before it reaches you and again after you try it, and it never goes straight from the tester to your skin.</p>
       <ul class="ticks">
-        <li><span><b>Sealed applicators.</b> Every tester is tried with a fresh swab, sponge or spatula, opened in front of you.</span></li>
-        <li><span><b>Disposed right after.</b> Used applicators never go back in the kit.</span></li>
+        <li><span><b>Cleaned between every customer.</b> Lipsticks and balms are wiped and their top layer removed. Bottles, pumps and caps are wiped down.</span></li>
+        <li><span><b>Never straight from the tester.</b> Creams and colours are taken out with a clean spatula onto a palette or the back of your hand. Fragrance goes on a blotter or your wrist.</span></li>
+        <li><span><b>Clean hands, always.</b> Your expert sanitises their hands before touching any product.</span></li>
         <li><span><b>Full size stays sealed.</b> The product you buy is untouched until it's yours.</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="navy-band pad">
+<section class="band pad founding">
   <div class="wrap">
-    <div class="sec-head rv">
-      <p class="eyebrow">Founding members</p>
-      <h2 class="h-display">Join early. <em>Shape the club.</em></h2>
-      <p class="lede">The first members in each area get more than a spot in the queue.</p>
+    <div class="founding-head rv">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Founding members</p>
+        <h2 class="h-display">Join early. <em>Shape the club.</em></h2>
+        <p class="lede">The first members in each area get more than a spot in the queue.</p>
+      </div>
+      <a class="btn btn-primary" href="join.html">Join the Tamiko Club <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
     </div>
     <div class="perks">
-      <div class="perk rv"><b>First slots in your area</b><p>Founding members get the first Expert Visit slots when we open near you.</p></div>
-      <div class="perk rv"><b>A say in the shelf</b><p>Tell us which brands and products you want to try, and we'll bring them in.</p></div>
-      <div class="perk rv"><b>Early drops</b><p>New brands and launches reach founding members before anyone else.</p></div>
+      <div class="perk rv"><span class="perk-n">01</span><b>First slots in your area</b><p>Founding members get the first home-trial slots when we open near you.</p></div>
+      <div class="perk rv"><span class="perk-n">02</span><b>A say in the shelf</b><p>Tell us which brands and products you want to try, and we'll bring them in.</p></div>
+      <div class="perk rv"><span class="perk-n">03</span><b>Early drops</b><p>New brands and launches reach founding members before anyone else.</p></div>
     </div>
   </div>
 </section>
 
-<section class="pad">
-  <div class="wrap">
-    <div class="cta-band rv">
-      <div class="copy">
-        <p class="eyebrow" style="color:var(--rose-soft)">The Tamiko Club</p>
-        <h2 class="h-display">Your next favourite is waiting <em style="color:var(--rose-soft)">at the door.</em></h2>
-        <p class="lede">Free to join. Opening first in Gurugram, then across Delhi NCR.</p>
-        <p><a class="btn btn-rose" href="join.html">Join the Tamiko Club <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a></p>
-        <div class="stores"><span class="store" aria-label="Tamiko on the App Store, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg><span class="store-txt"><small>Tamiko on the</small><b>App Store</b></span><em class="soon">Coming soon</em></span><span class="store" aria-label="Tamiko on Google Play, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" stroke-linejoin="round"/></svg><span class="store-txt"><small>Tamiko on</small><b>Google Play</b></span><em class="soon">Coming soon</em></span></div>
-      </div>
-      <figure class="art " style="--ar:1448 / 1086"><img src="images/join-door.jpg" alt="An open front door glowing with warm light and a beauty kit on the step" loading="lazy" width="1448" height="1086" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/join-door.jpg</figcaption></figure>
-    </div>
-  </div>
-</section>
 
 </main>
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="wordmark" href="index.html" aria-label="Tamiko home"><img src="logo-white.svg" alt="Tamiko" width="150" height="39"></a>
-        <p class="foot-tag">Beauty and personal care, tried at home before you buy. Opening first in Gurugram.</p>
+        <a class="wordmark" href="index.html" aria-label="Tamiko home"><img src="logo-white.svg" alt="Tamiko" width="140" height="34"></a>
+        <p class="foot-tag">Beauty and personal care, tried at home before you buy. Launching in Delhi NCR.</p>
+        <address class="foot-addr"><span>Office</span>Tamiko Technologies Private Limited<br>3rd Floor, Landmark Cyber Park, Sector 67, Gurugram, Haryana 122002</address>
         <div class="stores stores-foot"><span class="store" aria-label="Tamiko on the App Store, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg><span class="store-txt"><small>Tamiko on the</small><b>App Store</b></span><em class="soon">Coming soon</em></span><span class="store" aria-label="Tamiko on Google Play, coming soon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" stroke-linejoin="round"/></svg><span class="store-txt"><small>Tamiko on</small><b>Google Play</b></span><em class="soon">Coming soon</em></span></div>
       </div>
       <div><h4>Tamiko</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="experts.html">Our experts</a></li><li><a href="faq.html">FAQ</a></li><li><a href="join.html">Join the Tamiko Club</a></li></ul></div>
