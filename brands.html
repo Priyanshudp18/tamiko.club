@@ -29,6 +29,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="site.css">
 <style>
+.stat b { font-size: 1.4rem; }
+.formats .card { padding: 20px 22px; }
+
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .stat { border-top: 2px solid var(--navy); padding-top: 20px; display: grid; gap: 8px; }
 .stat b { font-family: var(--f-display); font-weight: 400; font-size: 1.8rem; line-height: 1.1; }
@@ -60,9 +63,9 @@
   </div>
 </section>
 
-<section class="band pad">
+<section class="band pad-sm">
   <div class="wrap">
-    <div class="sec-head rv"><p class="eyebrow">Why it works</p><h2 class="h-display">Trial is the step <em>e-commerce skipped.</em></h2></div>
+    <div class="sec-head rv" style="margin-bottom:28px"><p class="eyebrow">Why it works</p><h2 class="h-display">Trial is the step <em>e-commerce skipped.</em></h2></div>
     <div class="stats">
       <div class="stat rv"><b>Real trial, not impressions</b><p>Every placement is a person trying your product on their own skin.</p></div>
       <div class="stat rv"><b>Feedback you can use</b><p>Ratings and reasons from every trial: shade fit, texture, scent, repurchase intent.</p></div>
@@ -71,9 +74,9 @@
   </div>
 </section>
 
-<section class="pad">
+<section class="pad-sm">
   <div class="wrap">
-    <div class="sec-head rv"><p class="eyebrow">Ways to partner</p><h2 class="h-display">Choose how people <em>meet your brand.</em></h2></div>
+    <div class="sec-head rv" style="margin-bottom:28px"><p class="eyebrow">Ways to partner</p><h2 class="h-display">Choose how people <em>meet your brand.</em></h2></div>
     <div class="formats">
       <div class="card rv"><p class="eyebrow">Try with Expert</p><h3>On the tray</h3><p>Your products carried by Tamiko experts and demonstrated in homes, with experts trained on your range.</p></div>
       <div class="card rv"><p class="eyebrow">Try with Sample</p><h3>In their hands in 60 minutes</h3><p>Samples delivered within the hour to people who match your audience, with the full size one tap away through Buy Direct.</p></div>
@@ -82,12 +85,13 @@
   </div>
 </section>
 
-<section class="band pad">
+<section class="band pad-sm">
   <div class="wrap grid-2">
-    <div class="rv"><figure class="art " style="--ar:1402 / 1122"><img src="images/brands-discovery.jpg" alt="Hands opening a box of beauty samples and reading a product card" loading="lazy" width="1402" height="1122" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/brands-discovery.jpg</figcaption></figure></div>
-    <div class="rv" style="display:grid;gap:20px">
+    <div class="rv" style="display:grid;gap:14px">
       <p class="eyebrow">How we work with brands</p>
       <h2 class="h-display" style="font-size:var(--s-3)">Authentic stock. <em>Honest advice.</em></h2>
+    </div>
+    <div class="rv">
       <ul class="ticks">
         <li><span>We source only from brands and authorised distributors, with an invoice for every unit.</span></li>
         <li><span>Experts stay neutral and earn no commission, so recommendations are trusted.</span></li>
@@ -98,7 +102,7 @@
   </div>
 </section>
 
-<section class="pad" id="partner">
+<section class="pad-sm" id="partner">
   <div class="wrap grid-2" style="align-items:start">
     <div class="rv" style="display:grid;gap:20px">
       <p class="eyebrow">Partner with us</p>

@@ -29,6 +29,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="site.css">
 <style>
+.skills { gap: 12px; }
+.skill { padding: 18px 20px; gap: 6px; }
+.skill svg { width: 26px; height: 26px; }
+.std { grid-template-columns: repeat(3, 1fr); gap: 0 28px; }
+.std div { padding: 14px 0; }
+.std b { font-size: 1.2rem; }
+@media (max-width: 760px) { .std { grid-template-columns: 1fr 1fr; } }
+
 .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .skill { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; display: grid; gap: 10px; min-width: 0; }
 .skill svg { width: 34px; height: 34px; color: var(--rose); }
@@ -65,9 +73,9 @@
   </div>
 </section>
 
-<section class="band pad">
+<section class="band pad-sm">
   <div class="wrap">
-    <div class="sec-head rv"><p class="eyebrow">What your expert can help with</p><h2 class="h-display">Ask anything. <em>Or nothing at all.</em></h2><p class="lede">Your expert is there to guide, not to sell. Lean on them as much or as little as you like.</p></div>
+    <div class="sec-head rv" style="margin-bottom:28px"><p class="eyebrow">What your expert can help with</p><h2 class="h-display">Ask anything. <em>Or nothing at all.</em></h2><p class="lede">Your expert is there to guide, not to sell. Lean on them as much or as little as you like.</p></div>
     <div class="skills">
       <div class="skill rv"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="17" cy="17" r="11"/><path d="M17 6v22" /></svg><h3>Shade and undertone</h3><p>Matching base and lip shades in your own daylight, not under store bulbs.</p></div>
       <div class="skill rv"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 22c3-8 15-8 18 0"/><circle cx="17" cy="12" r="5"/></svg><h3>Skin type and concerns</h3><p>Choosing textures and actives that suit oily, dry, sensitive or combination skin.</p></div>
@@ -79,7 +87,7 @@
   </div>
 </section>
 
-<section class="navy-band pad">
+<section class="navy-band pad-sm">
   <div class="wrap grid-2" style="align-items:start">
     <div class="sec-head rv" style="margin-bottom:0"><p class="eyebrow">The Tamiko standard</p><h2 class="h-display">Who walks <em>through your door.</em></h2><p class="lede">You're letting someone into your home. We take that seriously.</p></div>
     <div class="std rv">
@@ -93,14 +101,13 @@
   </div>
 </section>
 
-<section class="pad" id="apply">
+<section class="pad-sm" id="apply">
   <div class="wrap grid-2" style="align-items:start">
     <div class="rv" style="display:grid;gap:22px">
       <p class="eyebrow">Careers</p>
       <h2 class="h-display" style="font-size:var(--s-3)">Become a Tamiko <em>BPC expert.</em></h2>
       <p class="lede">If you know beauty and love helping people find what works for them, we'd like to meet you. Beauty advisors, makeup artists, skin and fragrance specialists, and freshers with real passion are all welcome.</p>
       <ul class="ticks"><li><span>Flexible slots in your area</span></li><li><span>Paid training across categories and brands</span></li><li><span>Fixed earnings per visit, no sales targets</span></li></ul>
-      <figure class="art " style="--ar:1586 / 992"><img src="images/expert-training.jpg" alt="A Tamiko expert practising application during training" loading="lazy" width="1586" height="992" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/expert-training.jpg</figcaption></figure>
     </div>
     <form class="form rv" data-form="expert" novalidate data-success="Thanks for applying. Our team will reach out within a week.">
       <div class="row2">
