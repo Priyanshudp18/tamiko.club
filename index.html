@@ -66,17 +66,24 @@
 @keyframes slide { to { transform: translateX(-50%); } }
 
 /* regret */
-.regret-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
-.feed { display: grid; gap: 14px; margin-top: 36px; }
+.regret-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 4vw, 60px); align-items: center; }
+.feed { display: grid; gap: 10px; margin-top: 26px; }
 .note { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 16px 18px; display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
 .note .ic { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(245,215,224,.14); color: var(--rose-soft); }
 .note p { margin: 0; } .note .top { display: flex; justify-content: space-between; gap: 10px; font-size: .78rem; color: var(--on-navy-muted); letter-spacing: .04em; margin-bottom: 4px; }
 .note .t { color: var(--on-navy); }
-.regret-art { position: sticky; top: 110px; }
-.punch { margin-top: 36px; font-family: var(--f-display); font-size: var(--s-2); line-height: 1.25; }
+.regret-art { position: static; }
+.regret-art .art.tall { width: min(100%, calc(62vh * var(--r, 0.8))); }
+@media (max-width: 640px) { .regret-art .art.tall { aspect-ratio: 4 / 3; } .regret-art .art.tall img { object-position: 50% 45%; } }
+.punch { margin-top: 24px; font-family: var(--f-display); font-size: var(--s-2); line-height: 1.25; }
 .punch em { color: var(--rose-soft); }
 
 /* manifesto chant */
+.manifesto-row { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between; }
+.manifesto-line { margin: 10px 0 0; font-family: var(--f-display); font-size: var(--s-2); line-height: 1.2; }
+.manifesto-line em { color: var(--rose); }
+.hyg-row { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+@media (max-width: 760px) { .hyg-row { grid-template-columns: 1fr; } }
 .chant { display: grid; gap: 4px; }
 .chant p { margin: 0; font-family: var(--f-display); font-size: clamp(2.4rem, 1.4rem + 5vw, 6rem); line-height: 1.02; letter-spacing: -0.02em; color: rgba(17,23,53,.16); transition: color .6s var(--ease); }
 .chant p.lit { color: var(--ink); }
@@ -111,13 +118,13 @@
 @media (max-width: 480px) { .sixty-steps li { grid-template-columns: 76px 1fr; } .sixty-steps .t { font-size: 1.35rem; } }
 
 /* categories */
-.cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.cats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
 .cat { position: relative; border-radius: 22px; overflow: hidden; min-width: 0; text-decoration: none; }
 .cat .art { border-radius: 22px; }
-.cat .lbl { position: absolute; z-index: 3; left: 14px; right: 14px; bottom: 14px; background: rgba(255,255,255,.93); backdrop-filter: blur(8px); border-radius: 16px; padding: 14px 16px; display: flex; justify-content: space-between; gap: 10px; align-items: center; transition: transform .5s var(--ease); }
+.cat .lbl { position: absolute; z-index: 3; left: 8px; right: 8px; bottom: 8px; justify-content: center !important; background: rgba(255,255,255,.93); backdrop-filter: blur(8px); border-radius: 16px; padding: 14px 16px; display: flex; justify-content: space-between; gap: 10px; align-items: center; transition: transform .5s var(--ease); }
 .cat:hover .lbl { transform: translateY(-4px); }
-.cat .lbl b { font-family: var(--f-display); font-weight: 400; font-size: 1.45rem; line-height: 1.1; }
-.cat .lbl span { font-size: .8rem; color: var(--muted); text-align: right; }
+.cat .lbl b { font-family: var(--f-display); font-weight: 400; font-size: 1.1rem; line-height: 1.1; }
+.cat .lbl span { display: none; }
 .cat .ph { top: 14px; bottom: auto; }
 
 /* steps */
@@ -164,15 +171,16 @@
   .regret-art { position: static; }
   .float-card.a { left: 10px; } .float-card.b { right: 10px; }
   .ways { grid-template-columns: 1fr; max-width: 640px; }
-  .cats { grid-template-columns: 1fr 1fr; }
+  .cats { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: 1fr 1fr; }
   .perks { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .steps { grid-template-columns: 1fr; }
-  .cats { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .cat .lbl { left: 8px; right: 8px; bottom: 8px; padding: 9px 10px; border-radius: 12px; }
-  .cat .lbl b { font-size: 1.05rem; }
+  .cat .lbl b { font-size: .85rem; }
+  .cat .lbl { padding: 6px 6px; left: 5px; right: 5px; bottom: 5px; }
   .cat .lbl span { display: none; }
   .float-card.b { display: none; }
 }
@@ -218,40 +226,22 @@
   <span>Makeup</span><span>Skincare</span><span>Fragrance</span><span>Haircare</span><span>Bath &amp; body</span><span>Grooming</span><span>Try first</span><span>Buy once</span>
 </div></div>
 
-<section class="navy-band pad">
+<section class="navy-band pad-sm">
   <div class="wrap regret-grid">
     <div>
       <div class="sec-head rv" style="margin-bottom:0">
         <p class="eyebrow">The blind-buy era</p>
-        <h2 class="h-display">Add to cart. Wait three days. <em>Instant regret.</em></h2>
-        <p class="lede">You watched the reviews. You zoomed into the swatch. It still came out wrong. If this feed looks familiar, you're who we built Tamiko for.</p>
+        <h2 class="h-display">Add to cart. Unbox. <em>Instant regret.</em></h2>
+        <p class="lede">You watched the reviews. You zoomed into the swatch. Whether it took three days or thirty minutes to reach you, it still came out wrong.</p>
       </div>
       <div class="feed">
-        <div class="note rv"><span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8l8-4 8 4v8l-8 4-8-4z M4 8l8 4 8-4 M12 12v8"/></svg></span><div><div class="top"><span>Delivered</span><span>Tue</span></div><p class="t">The shade looked perfect in the video. On you, it's two tones off.</p></div></div>
+        <div class="note rv"><span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8l8-4 8 4v8l-8 4-8-4z M4 8l8 4 8-4 M12 12v8"/></svg></span><div><div class="top"><span>Delivered</span><span>Tue</span></div><p class="t">The shade looked perfect in the video. On you, two tones off.</p></div></div>
         <div class="note rv"><span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="10" r="4"/><circle cx="16" cy="15" r="3"/><circle cx="15" cy="6" r="1.5"/></svg></span><div><div class="top"><span>Day 5 of use</span><span>Sat</span></div><p class="t">The serum everyone swore by just broke you out.</p></div></div>
-        <div class="note rv"><span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="9" width="8" height="11" rx="2"/><path d="M10 9V5h4v4M17 6l2-1M17 9h2"/></svg></span><div><div class="top"><span>First spray</span><span>Mon</span></div><p class="t">It smelled like a dream in the reel. On you, it's hand wash.</p></div></div>
-        <div class="note rv"><span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 12h16M10 8.5h4M10 15.5h4"/></svg></span><div><div class="top"><span>Return window</span><span>Closed</span></div><p class="t">₹2,400 of “maybe I'll use it” sitting in a drawer.</p></div></div>
+        <div class="note rv"><span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="9" width="8" height="11" rx="2"/><path d="M10 9V5h4v4M17 6l2-1M17 9h2"/></svg></span><div><div class="top"><span>First spray</span><span>Mon</span></div><p class="t">Smelled like a dream in the reel. On you, hand wash.</p></div></div>
       </div>
-      <p class="punch rv">That's blind buying. <em>We're ending it.</em></p>
+      <p class="punch rv">That's buying blind. <em>Tamiko ends it.</em></p>
     </div>
     <div class="regret-art rv"><figure class="art tall" style="--ar:1122 / 1402;--r:0.8003"><img src="images/regret-room.jpg" alt="Someone sitting among opened delivery boxes of beauty products on a rainy afternoon" loading="lazy" width="1122" height="1402" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/regret-room.jpg</figcaption></figure></div>
-  </div>
-</section>
-
-<section class="pad">
-  <div class="wrap">
-    <p class="eyebrow rv" style="margin-bottom:28px">The Tamiko Club manifesto</p>
-    <div class="chant" id="chant">
-      <p>No more guessing.</p>
-      <p>No more <em>“it looked different online.”</em></p>
-      <p>Try first.</p>
-      <p>Buy once.</p>
-      <p>Love it <em>for real.</em></p>
-    </div>
-    <div class="chant-foot rv">
-      <p>The Tamiko Club is for everyone who's done paying for products that only work on other people. Membership is free. The only rule: you never buy blind again.</p>
-      <a class="btn btn-rose" href="join.html">Become a member <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
-    </div>
   </div>
 </section>
 
@@ -309,9 +299,9 @@
   </div>
 </section>
 
-<section class="pad">
+<section class="pad-sm">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head rv" style="margin-bottom:28px">
       <p class="eyebrow">Everything in your routine</p>
       <h2 class="h-display">The whole of beauty and personal care, <em>at your door.</em></h2>
     </div>
@@ -335,18 +325,17 @@
   </div>
 </section>
 
-<section class="pad">
-  <div class="wrap grid-2">
+<section class="pad-sm">
+  <div class="wrap hyg-row">
     <div class="rv"><figure class="art " style="--ar:1402 / 1122"><img src="images/hygiene.jpg" alt="A Tamiko expert preparing a cleaned tester on a clean tray" loading="lazy" width="1402" height="1122" decoding="async" onload="this.classList.add(&quot;ok&quot;)" onerror="this.remove()"><figcaption class="ph">images/hygiene.jpg</figcaption></figure></div>
-    <div class="rv" style="display:grid;gap:22px">
+    <div class="rv" style="display:grid;gap:16px">
       <p class="eyebrow">Hygiene, built in</p>
-      <h2 class="h-display" style="font-size:var(--s-3)">Clean testers. <em>Every visit.</em></h2>
-      <p class="lede">Each product has one tester, so we look after it properly. It is cleaned before it reaches you and again after you try it, and it never goes straight from the tester to your skin.</p>
+      <h2 class="h-display" style="font-size:var(--s-2)">Clean testers. <em>Every visit.</em></h2>
       <ul class="ticks">
-        <li><span><b>Cleaned between every customer.</b> Lipsticks and balms are wiped and their top layer removed. Bottles, pumps and caps are wiped down.</span></li>
-        <li><span><b>Never straight from the tester.</b> Creams and colours are taken out with a clean spatula onto a palette or the back of your hand. Fragrance goes on a blotter or your wrist.</span></li>
-        <li><span><b>Clean hands, always.</b> Your expert sanitises their hands before touching any product.</span></li>
-        <li><span><b>Full size stays sealed.</b> The product you buy is untouched until it's yours.</span></li>
+        <li><span><b>Cleaned between every customer.</b> Lipstick tops removed, bottles and caps wiped.</span></li>
+        <li><span><b>Never straight from the tester.</b> Applied with a clean spatula or on a blotter.</span></li>
+        <li><span><b>Clean hands, always.</b> Your expert sanitises before touching any product.</span></li>
+        <li><span><b>Full size stays sealed</b> until it's yours.</span></li>
       </ul>
     </div>
   </div>
