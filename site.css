@@ -229,7 +229,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .follow { grid-column: 2 / -1; align-self: start; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); }
 .follow h4 em { font-style: normal; text-transform: none; letter-spacing: .02em; color: var(--on-navy); opacity: .85; margin-left: 6px; }
 .socs { display: flex; flex-wrap: wrap; gap: 10px; }
-.socs a.soc { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px 0 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: var(--on-navy); font-size: .95rem; font-weight: 500; opacity: 1; text-decoration: none; transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease); }
+.socs a.soc { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); color: var(--on-navy); font-size: .95rem; font-weight: 500; opacity: 1; text-decoration: none; transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease); }
 .socs a.soc svg { flex: none; }
 .socs a.soc:hover, .socs a.soc:focus-visible { background: var(--rose); border-color: var(--rose); color: #fff; }
 @media (max-width: 960px) { .follow { grid-column: 1 / -1; } .foot-grid > :first-child { grid-row: auto; } }
