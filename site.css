@@ -226,17 +226,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   background: var(--rose); color: #fff; padding: 4px 8px; border-radius: 999px; box-shadow: 0 6px 14px -6px rgba(207,106,134,.8); }
 .stores-foot { margin-top: 22px; }
 .foot-grid > :first-child { grid-row: span 2; }
-.follow { grid-column: 2 / -1; align-self: end; }
-.fcards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-.fcard { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); text-decoration: none; opacity: 1 !important; transition: background .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease); }
-a.fcard:hover, a.fcard:focus-visible { background: rgba(255,255,255,.11); border-color: var(--rose); transform: translateY(-2px); color: inherit !important; }
-.fi { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--rose); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
-.ft { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
-.ft b { font-weight: 600; color: var(--on-navy); }
-.ft small { font-size: .82rem; color: var(--on-navy-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-@media (max-width: 1100px) { .fcards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.follow { grid-column: 2 / -1; align-self: start; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); }
+.follow h4 em { font-style: normal; text-transform: none; letter-spacing: .02em; color: var(--on-navy); opacity: .85; margin-left: 6px; }
+.socs { display: flex; flex-wrap: wrap; gap: 10px; }
+.socs a.soc { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px 0 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: var(--on-navy); font-size: .95rem; font-weight: 500; opacity: 1; text-decoration: none; transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease); }
+.socs a.soc svg { flex: none; }
+.socs a.soc:hover, .socs a.soc:focus-visible { background: var(--rose); border-color: var(--rose); color: #fff; }
 @media (max-width: 960px) { .follow { grid-column: 1 / -1; } .foot-grid > :first-child { grid-row: auto; } }
-@media (max-width: 480px) { .fcard { padding: 12px; gap: 10px; } .fi { width: 36px; height: 36px; } .ft small { white-space: normal; overflow-wrap: anywhere; } }
 .stores-foot .store { background: rgba(255,255,255,.06); }
 .navy-band .store { background: rgba(255,255,255,.07); }
 
