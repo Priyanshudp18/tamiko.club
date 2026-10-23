@@ -225,6 +225,9 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .soon { position: static; margin-left: 4px; align-self: center; white-space: nowrap; font-style: normal; font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
   background: var(--rose); color: #fff; padding: 4px 8px; border-radius: 999px; box-shadow: 0 6px 14px -6px rgba(207,106,134,.8); }
 .stores-foot { margin-top: 22px; }
+.social { display: flex; gap: 10px; margin-top: 22px; }
+.social a { width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--on-navy); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease); }
+.social a:hover, .social a:focus-visible { background: var(--rose); color: #fff; transform: translateY(-2px); }
 .stores-foot .store { background: rgba(255,255,255,.06); }
 .navy-band .store { background: rgba(255,255,255,.07); }
 
