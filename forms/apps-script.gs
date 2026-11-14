@@ -9,7 +9,7 @@
  *    Copy the Web app URL and paste it into site.js as FORM_ENDPOINT.
  */
 const SHEET_ID = "1whDOrv2je3rJJuOl6iCIeWxx1sWlDwUPWWhi5dekNNk";
-const NOTIFY_EMAIL = "priyanshu.dp18@gmail.com";
+const NOTIFY_EMAIL = "admin@tamiko.club";
 
 const TABS = {
   waitlist: ["Received at", "Name", "Phone", "Email", "Area", "Interests", "Brands", "Source"],
