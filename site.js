@@ -3,7 +3,7 @@
   /* Paste a form backend URL here (Formspree, Google Apps Script, or your own API) to collect submissions directly.
      Leave empty and forms open the visitor's email app addressed to support@tamiko.club instead. */
   const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyLPsJO0sUc8jdEufJE4xHAlhZ_oDaevWaoFkP0nbV-2exMcslKdcjdQH5N-Bf1vt6_IQ/exec";
-  const CONTACT = "support@tamiko.club";
+  const SUPPORT = "support@tamiko.club";
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* images: show any that finished loading before this script ran */
@@ -67,6 +67,7 @@
   /* forms */
   document.querySelectorAll("form[data-form]").forEach((form) => {
     const kind = form.getAttribute("data-form");
+    const CONTACT = kind === "brand" ? "partner@tamiko.club" : SUPPORT;
     const msg = form.querySelector(".form-msg"), btn = form.querySelector("button[type=submit]");
     const show = (t, err) => { msg.textContent = t; msg.hidden = false; msg.classList.toggle("err", !!err); };
     form.addEventListener("submit", async (e) => {
@@ -93,7 +94,7 @@
         return;
       }
       const lines = Object.entries(data).filter(([k]) => !["source", "at", "form"].includes(k)).map(([k, v]) => `${k[0].toUpperCase() + k.slice(1)}: ${v}`);
-      const subj = { waitlist: "Try Club waitlist", expert: "Expert application", brand: "Brand partnership" }[kind] || "Hello Tamiko";
+      const subj = { waitlist: "Tamiko Club waitlist", expert: "Expert application", brand: "Brand partnership" }[kind] || "Hello Tamiko";
       location.href = `mailto:${CONTACT}?subject=${encodeURIComponent(subj + (data.name ? ": " + data.name : ""))}&body=${encodeURIComponent(lines.join("\n"))}`;
       show(`Your email app should open with these details. Press send and you're done. If nothing opened, write to ${CONTACT}.`);
     });
