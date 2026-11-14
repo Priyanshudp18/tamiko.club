@@ -1,14 +1,16 @@
 /**
  * Tamiko website forms → Google Sheet + email alert.
+ * Runs in the tamikotechnologies@gmail.com Google account.
  *
  * Setup (one time):
- * 1. Create a new Apps Script project (script.new) named "Tamiko forms".
- * 2. Paste this whole file. SHEET_ID is the Google Sheet "Tamiko website leads". Save.
+ * 1. Create a new Apps Script project named "Tamiko forms" and paste this whole file. Save.
+ * 2. Run setup() once. It copies the old "Tamiko website leads" sheet into this account
+ *    (or creates a fresh one), shares it with NOTIFY_EMAIL and remembers its ID.
  * 3. Deploy → New deployment → type "Web app"
  *      Execute as: Me      Who has access: Anyone
  *    Copy the Web app URL and paste it into site.js as FORM_ENDPOINT.
  */
-const SHEET_ID = "1whDOrv2je3rJJuOl6iCIeWxx1sWlDwUPWWhi5dekNNk";
+const OLD_SHEET_ID = "1whDOrv2je3rJJuOl6iCIeWxx1sWlDwUPWWhi5dekNNk";
 const NOTIFY_EMAIL = "admin@tamiko.club";
 
 const TABS = {
@@ -23,6 +25,23 @@ const FIELDS = {
 };
 const TITLES = { waitlist: "Tamiko Club signups", expert: "Expert applications", brand: "Brand enquiries" };
 
+function setup() {
+  const props = PropertiesService.getScriptProperties();
+  if (props.getProperty("SHEET_ID")) {
+    Logger.log("Already set up: " + SpreadsheetApp.openById(props.getProperty("SHEET_ID")).getUrl());
+    return;
+  }
+  let file;
+  try {
+    file = DriveApp.getFileById(OLD_SHEET_ID).makeCopy("Tamiko website leads");
+  } catch (err) {
+    file = DriveApp.getFileById(SpreadsheetApp.create("Tamiko website leads").getId());
+  }
+  file.addEditor(NOTIFY_EMAIL);
+  props.setProperty("SHEET_ID", file.getId());
+  Logger.log("Leads sheet: " + file.getUrl());
+}
+
 function doPost(e) {
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
@@ -30,7 +49,7 @@ function doPost(e) {
     let data = {};
     try { data = JSON.parse(e.postData.contents); } catch (_) { data = e.parameter || {}; }
     const kind = TABS[data.form] ? data.form : "waitlist";
-    const ss = SpreadsheetApp.openById(SHEET_ID);
+    const ss = SpreadsheetApp.openById(PropertiesService.getScriptProperties().getProperty("SHEET_ID"));
     let sh = ss.getSheetByName(TITLES[kind]);
     if (!sh) {
       sh = ss.insertSheet(TITLES[kind]);
